@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ex="http://example.org/infosec#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/infosec#Event003">
+    <rdf:type rdf:resource="http://example.org/infosec#SuccessfulLogin"/>
+    <ex:hasDescription>Successful login for backup operator on backup-01</ex:hasDescription>
+    <ex:hasSourceIP>10.0.0.25</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Low"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#SuccessfulLogin"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_0_0_25"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#backup_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#backup_operator"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#PrivilegeUse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#PhishingAttempt">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#MalwareEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event001">
+    <rdf:type rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:hasDescription>Multiple login attempts detected from external IP 192.168.1.100</ex:hasDescription>
+    <ex:hasSourceIP>192.168.1.100</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_192_168_1_100"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#auth_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#admin"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#AccountCompromise"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event012">
+    <rdf:type rdf:resource="http://example.org/infosec#DDoS"/>
+    <ex:hasDescription>SYN flood detected causing service unavailable on web server</ex:hasDescription>
+    <ex:hasSourceIP>198.18.0.1</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#DDoS"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_198_18_0_1"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#web_02"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#ServiceDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#MalwareEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#SecurityEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event005">
+    <rdf:type rdf:resource="http://example.org/infosec#DDoS"/>
+    <ex:hasDescription>DDoS traffic flood detected against portal-01</ex:hasDescription>
+    <ex:hasSourceIP>203.0.113.10</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#DDoS"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_203_0_113_10"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#portal_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#ServiceDisruption"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event021">
+    <rdf:type rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:hasDescription>Фишинговое письмо обнаружено в почтовом ящике пользователя employee_01</ex:hasDescription>
+    <ex:hasSourceIP>198.51.100.77</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_198_51_100_77"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#mail_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#employee_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#CredentialTheftAttempt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#file_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#web_02">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#auth_02">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event014">
+    <rdf:type rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:hasDescription>Ransomware activity detected encrypting files on server file-01</ex:hasDescription>
+    <ex:hasSourceIP>10.10.30.40</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_10_30_40"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#file_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#CriticalMalwareInfection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#PrivilegeUse">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event019">
+    <rdf:type rdf:resource="http://example.org/infosec#PortScan"/>
+    <ex:hasDescription>Обнаружено сканирование портов на хосте web-01</ex:hasDescription>
+    <ex:hasSourceIP>172.16.0.50</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PortScan"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_172_16_0_50"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#web_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#Reconnaissance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event002">
+    <rdf:type rdf:resource="http://example.org/infosec#FailedLogin"/>
+    <ex:hasDescription>Authentication failure for admin account on auth-01</ex:hasDescription>
+    <ex:hasSourceIP>10.0.0.15</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#FailedLogin"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_0_0_15"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#auth_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#admin"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#UnauthorizedAccessAttempt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event004">
+    <rdf:type rdf:resource="http://example.org/infosec#PortScan"/>
+    <ex:hasDescription>Port scan detected on host web-01 using nmap</ex:hasDescription>
+    <ex:hasSourceIP>172.16.0.50</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PortScan"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_172_16_0_50"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#web_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#Reconnaissance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_192_168_1_100">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event013">
+    <rdf:type rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:hasDescription>Trojan detected on workstation pc-45 during antivirus scan</ex:hasDescription>
+    <ex:hasSourceIP>10.10.20.30</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_10_20_30"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#pc_45"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#employee_03"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#MalwareInfection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event006">
+    <rdf:type rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:hasDescription>Malware detected on workstation pc-22 after suspicious file execution</ex:hasDescription>
+    <ex:hasSourceIP>10.10.10.20</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_10_10_20"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#pc_22"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#employee_02"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#MalwareInfection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event018">
+    <rdf:type rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:hasDescription>Множественные попытки входа в учетную запись admin с IP 192.168.1.100</ex:hasDescription>
+    <ex:hasSourceIP>192.168.1.100</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_192_168_1_100"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#auth_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#admin"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#AccountCompromise"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#NetworkEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#SecurityEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event009">
+    <rdf:type rdf:resource="http://example.org/infosec#FailedLogin"/>
+    <ex:hasDescription>Invalid password entered for user root on server db-01</ex:hasDescription>
+    <ex:hasSourceIP>10.0.0.33</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#FailedLogin"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_0_0_33"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#db_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#root"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#UnauthorizedAccessAttempt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#mayLeadTo">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event007">
+    <rdf:type rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:hasDescription>Phishing email detected with fake login page for employee_01</ex:hasDescription>
+    <ex:hasSourceIP>198.51.100.77</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_198_51_100_77"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#mail_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#employee_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#CredentialTheftAttempt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event011">
+    <rdf:type rdf:resource="http://example.org/infosec#PortScan"/>
+    <ex:hasDescription>Nmap scan detected from IP 45.67.89.10 targeting internal network</ex:hasDescription>
+    <ex:hasSourceIP>45.67.89.10</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PortScan"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_45_67_89_10"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#fw_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#Reconnaissance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event017">
+    <rdf:type rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:hasDescription>Multiple failed logins detected on ssh service of server linux-01</ex:hasDescription>
+    <ex:hasSourceIP>172.20.10.5</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_172_20_10_5"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#linux_01"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#BruteForceAttempt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event015">
+    <rdf:type rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:hasDescription>Phishing message detected pretending to be bank notification</ex:hasDescription>
+    <ex:hasSourceIP>203.0.113.55</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_203_0_113_55"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#mail_02"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#employee_04"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#CredentialTheftAttempt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#employee_01">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Low">
+    <rdf:type rdf:resource="http://example.org/infosec#Severity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#High">
+    <rdf:type rdf:resource="http://example.org/infosec#Severity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event020">
+    <rdf:type rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:hasDescription>Обнаружено вредоносное ПО на рабочей станции pc-22</ex:hasDescription>
+    <ex:hasSourceIP>10.10.10.20</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#MalwareDetection"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_10_10_20"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#pc_22"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#employee_02"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#MalwareInfection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_198_51_100_77">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Host">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#fw_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#employee_03">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event008">
+    <rdf:type rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:hasDescription>Brute force attack detected against admin account from IP 185.23.45.10</ex:hasDescription>
+    <ex:hasSourceIP>185.23.45.10</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#High"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#BruteForce"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_185_23_45_10"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#auth_02"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#admin"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#AccountCompromise"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#CredentialTheftAttempt">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event010">
+    <rdf:type rdf:resource="http://example.org/infosec#SuccessfulLogin"/>
+    <ex:hasDescription>User john successfully logged in to vpn-gateway</ex:hasDescription>
+    <ex:hasSourceIP>10.0.1.12</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Low"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#SuccessfulLogin"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_10_0_1_12"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#vpn_01"/>
+    <ex:relatedToUser rdf:resource="http://example.org/infosec#john"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#NormalAccess"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#relatedToUser">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_0_0_33">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_45_67_89_10">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#employee_02">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#SuccessfulLogin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#AuthenticationEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#backup_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#PhishingCampaign">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#auth_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_192_0_2_77">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#web_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Medium">
+    <rdf:type rdf:resource="http://example.org/infosec#Severity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#FailedLogin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#AuthenticationEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#belongsToCategory">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_172_20_10_5">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Event016">
+    <rdf:type rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:hasDescription>Fake login page detected in email campaign targeting employees</ex:hasDescription>
+    <ex:hasSourceIP>192.0.2.77</ex:hasSourceIP>
+    <ex:hasSeverity rdf:resource="http://example.org/infosec#Medium"/>
+    <ex:belongsToCategory rdf:resource="http://example.org/infosec#PhishingAttempt"/>
+    <ex:initiatedBy rdf:resource="http://example.org/infosec#Source_192_0_2_77"/>
+    <ex:affectsHost rdf:resource="http://example.org/infosec#mail_03"/>
+    <ex:mayLeadTo rdf:resource="http://example.org/infosec#PhishingCampaign"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#User">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#NormalAccess">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#john">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_0_1_12">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_198_18_0_1">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#mail_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#root">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#hasSeverity">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#pc_22">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#BruteForce">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#AuthenticationEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#hasSourceIP">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#SecurityEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#employee_04">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#admin">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_172_16_0_50">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Asset">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_10_10_20">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#mail_03">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#ServiceDisruption">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_10_30_40">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_185_23_45_10">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#AccountCompromise">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#mail_02">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#db_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_0_0_15">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Severity">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Incident">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#pc_45">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_10_20_30">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#linux_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_10_0_0_25">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#affectsHost">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#DDoS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#NetworkEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#PortScan">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#NetworkEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#BruteForceAttempt">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#MalwareDetection">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#MalwareEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Reconnaissance">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#portal_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_203_0_113_55">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#vpn_01">
+    <rdf:type rdf:resource="http://example.org/infosec#Host"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#AuthenticationEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/infosec#SecurityEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#backup_operator">
+    <rdf:type rdf:resource="http://example.org/infosec#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#UnauthorizedAccessAttempt">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#initiatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#MalwareInfection">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#CriticalMalwareInfection">
+    <rdf:type rdf:resource="http://example.org/infosec#Incident"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/infosec#Source_203_0_113_10">
+    <rdf:type rdf:resource="http://example.org/infosec#Source"/>
+  </rdf:Description>
+</rdf:RDF>
